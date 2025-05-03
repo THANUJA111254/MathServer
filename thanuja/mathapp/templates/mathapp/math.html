@@ -1,0 +1,62 @@
+math.html:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Power Calculator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: azure;
+            
+        }
+        
+        form {
+            max-width: 400px;
+            margin: 0 auto;
+        }
+        input, button {
+            display: block;
+            width: 100%;
+            margin: 10px 0;
+            padding: 8px;
+            font-size: 1rem;
+        }
+        .result {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #f8f8f8;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="image">
+    <h1 style="text-align: center;">Calculate Power</h1>
+    <form method="post">
+        {% csrf_token %}
+        <label for="intensity">Intensity (I):</label>
+        <input type="number" step="0.01" id="intensity" name="intensity" required>
+
+        <label for="resistance">Resistance (R):</label>
+        <input type="number" step="0.01" id="resistance" name="resistance" required>
+
+        <button type="submit">Calculate Power</button>
+    </form>
+
+    {% if power is not None %}
+    <div class="result">
+        <h2>Result</h2>
+        <p><strong>Power (P):</strong> {{ power }} Watts</p>
+    </div>
+</div>
+    {% endif %}
+</body>
+</html>
+
+
+ 
