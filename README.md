@@ -129,17 +129,20 @@ urlpatterns = [
     path('',views.power_calculator,name="power_calculator")
 ]
 
- ```
+ ````
 
 
 
 
-## SERVER SIDE PROCESSING:
-Screenshot 2025-05-03 191137.png
+###  SERVERSIDE PROCESSING :
+
+![alt text](<Screenshot 2025-05-03 191137.png>)
+
+
 
 ## HOMEPAGE:
+![alt text](<Screenshot 2025-05-03 190816.png>)
 
-Screenshot 2025-05-03 190816.png
 
 
 ## RESULT:
